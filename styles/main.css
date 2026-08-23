@@ -1,0 +1,266 @@
+/* ==========================================================================
+   VIETANA GROUP — CORPORATE DESIGN SYSTEM
+   Visual Direction: Premium Corporate, Minimal, Deep Navy, Subtle Blue
+   ========================================================================== */
+
+:root {
+  /* Core Color Palette */
+  --color-bg: #FFFFFF;
+  --color-bg-subtle: #F8FAFC;
+  --color-bg-alt: #F1F5F9;
+  
+  /* Deep Navy Typography Hierarchy */
+  --color-navy-primary: #0A1128;
+  --color-navy-deep: #0F172A;
+  --color-navy-medium: #1E293B;
+  --color-slate-body: #475569;
+  --color-slate-muted: #64748B;
+  --color-slate-light: #94A3B8;
+
+  /* Logo Blue Accents */
+  --color-blue-primary: #1D4ED8;
+  --color-blue-accent: #2563EB;
+  --color-blue-subtle: #3B82F6;
+  --color-blue-light: #EFF6FF;
+  --color-blue-tint: rgba(37, 99, 235, 0.08);
+  --color-blue-glow: rgba(37, 99, 235, 0.15);
+
+  /* Subtle Warm / Neutral Accents */
+  --color-border: #E2E8F0;
+  --color-border-subtle: #EDF2F7;
+  --color-border-hover: #CBD5E1;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-editorial: 'Cormorant Garamond', Georgia, serif;
+
+  /* Shadows & Elevations */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.07), 0 2px 6px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 48px rgba(15, 23, 42, 0.09), 0 4px 12px rgba(15, 23, 42, 0.05);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout Spacing */
+  --container-max: 1200px;
+  --container-narrow: 840px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+}
+
+/* Base Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-slate-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Focus styles for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-blue-accent);
+  outline-offset: 3px;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-navy-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--color-slate-body);
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.section-subtle {
+  background-color: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+/* Section Header Typography */
+.section-tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-blue-primary);
+  margin-bottom: 1rem;
+}
+
+.section-tagline::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background-color: var(--color-blue-primary);
+  border-radius: 2px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-navy-primary);
+  margin-bottom: 1.25rem;
+}
+
+.section-description {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.65;
+  color: var(--color-slate-body);
+  max-width: 680px;
+}
+
+/* Subtle Architectural Vietnam Line Accent & Coming Soon Watermark */
+.vietnam-pattern-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 1px 1px, var(--color-border) 1px, transparent 0);
+  background-size: 40px 40px;
+  opacity: 0.45;
+  mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 70%, transparent 100%);
+}
+
+.bg-coming-soon-watermark {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  font-family: var(--font-heading);
+  font-size: clamp(5rem, 14vw, 15rem);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(10, 17, 40, 0.028);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  line-height: 1;
+}
+
+.coming-soon-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 1.15rem;
+  background: rgba(37, 99, 235, 0.06);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-blue-primary);
+  margin-bottom: 2rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.05);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10B981;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background-color: #10B981;
+  opacity: 0.5;
+  animation: pulse-ring 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  70% { transform: scale(2.4); opacity: 0; }
+  100% { transform: scale(2.6); opacity: 0; }
+}

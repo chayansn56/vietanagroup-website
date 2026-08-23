@@ -1,0 +1,23 @@
+{
+  "name": "vietanagroup-corporate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official corporate website for VIETANA GROUP (vietanagroup.com)",
+  "scripts": {
+    "dev": "npx -y serve . -l 3000",
+    "start": "npx -y serve . -l 3000",
+    "serve": "npx -y serve . -l 3000",
+    "build": "echo 'Static build ready for deployment'"
+  },
+  "keywords": [
+    "vietana",
+    "corporate",
+    "vietnam",
+    "consulting",
+    "technology",
+    "marketing",
+    "hospitality"
+  ],
+  "author": "VIETANA GROUP COMPANY LIMITED",
+  "license": "UNLICENSED"
+}
