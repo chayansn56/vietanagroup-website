@@ -1,4 +1,6 @@
 {
+  "buildCommand": "mkdir -p dist && cp -r index.html public styles scripts dist/ && cp public/* dist/ 2>/dev/null || true",
+  "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
@@ -20,10 +22,6 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=()"
         }
       ]
     }
