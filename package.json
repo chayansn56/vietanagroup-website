@@ -7,16 +7,12 @@
     "dev": "npx -y serve . -l 3000",
     "start": "npx -y serve . -l 3000",
     "serve": "npx -y serve . -l 3000",
-    "build": "echo 'Static build ready for deployment'"
+    "build": "mkdir -p dist && cp -r index.html public styles scripts dist/"
   },
   "keywords": [
     "vietana",
     "corporate",
-    "vietnam",
-    "consulting",
-    "technology",
-    "marketing",
-    "hospitality"
+    "vietnam"
   ],
   "author": "VIETANA GROUP COMPANY LIMITED",
   "license": "UNLICENSED"
