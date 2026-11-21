@@ -1,7 +1,10 @@
 /**
  * VIETANA GROUP — Corporate Client Interactive Logic
- * Lightweight, accessible, zero external dependencies.
- * Includes bilingual switcher (EN / VI), smooth scrolling, and corporate inquiry dispatch.
+ * Features:
+ * - Full bilingual i18n switcher (English / Tiếng Việt)
+ * - Real brand ecosystem & corporate governance data
+ * - Executive inquiry dispatch via direct email and WhatsApp
+ * - Accessible, responsive, zero-dependency architecture
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,181 +14,299 @@ document.addEventListener('DOMContentLoaded', () => {
   const i18n = {
     en: {
       nav_about: 'About',
-      nav_businesses: 'Businesses',
+      nav_businesses: 'Divisions',
+      nav_portfolio: 'Portfolio',
       nav_framework: 'Advantage',
+      nav_governance: 'Governance',
       nav_contact: 'Contact',
-      nav_get_in_touch: 'Get in Touch',
-      badge_corp_status: 'Official Corporate Portal · Ho Chi Minh City',
+      nav_get_in_touch: 'Connect with Us',
+
+      badge_corp_status: 'CÔNG TY TNHH VIETANA GROUP · MST: 0319680543',
       hero_title: 'VIETANA GROUP',
+      hero_tagline: 'Building Enterprises · Powering Technology · Cultivating Culture',
       hero_subheading_1: 'Consulting',
       hero_subheading_2: 'Technology',
       hero_subheading_3: 'Marketing',
       hero_subheading_4: 'Hospitality',
-      hero_supporting: 'A diversified multi-sector enterprise group in Vietnam — building resilient businesses, engineering modern technology, and creating enduring value.',
-      hero_cta_explore: 'Explore Our Businesses',
-      hero_cta_contact: 'Corporate Inquiry',
-      
+      hero_supporting: 'Headquartered in Ho Chi Minh City, VIETANA GROUP is a multi-sector enterprise operating across business consulting, enterprise technology, brand marketing, and hospitality ventures in Vietnam.',
+      hero_cta_portfolio: 'Explore Our Portfolio',
+      hero_cta_contact: 'Executive Inquiry',
+
       stat_pillars_num: '04',
-      stat_pillars_lbl: 'Core Operating Pillars',
+      stat_pillars_lbl: 'Operating Divisions',
+      stat_branches_num: '04+',
+      stat_branches_lbl: 'Active Culinary Branches',
+      stat_tax_num: '0319680543',
+      stat_tax_lbl: 'Tax / Enterprise Code',
       stat_hq_num: 'HCMC',
       stat_hq_lbl: 'Corporate Headquarters',
-      stat_scope_num: 'Nationwide',
-      stat_scope_lbl: 'Vietnam & Regional Reach',
-      stat_standards_num: 'Enterprise',
-      stat_standards_lbl: 'Governance & Execution',
 
-      about_badge: 'Corporate Overview',
+      about_badge: 'Corporate Background',
       about_title: 'About VIETANA GROUP',
-      about_text: '<strong>VIETANA GROUP COMPANY LIMITED</strong> is a forward-looking Vietnam-based enterprise operating across business consulting, technology solutions, strategic marketing, and hospitality ventures. We unite market acumen, technology engineering, and operational discipline to build high-standard ventures and drive sustainable commercial growth.',
-      pillar_consulting_sub: 'Strategy & Advisory',
-      pillar_tech_sub: 'Engineering & Platforms',
-      pillar_marketing_sub: 'Branding & Growth',
-      pillar_hospitality_sub: 'Commercial Concepts',
+      about_text: '<strong>VIETANA GROUP COMPANY LIMITED (CÔNG TY TNHH VIETANA GROUP)</strong> is an agile enterprise group founded on the conviction that Vietnam’s dynamic growth is best realized through integrated cross-sector execution. Operating across consulting, digital engineering, brand architecture, and hospitality, we connect international standards with deep Vietnamese operational fluency to build resilient, high-value businesses.',
+      pillar_consulting_sub: 'Cross-Border Advisory',
+      pillar_tech_sub: 'Enterprise AI & Platforms',
+      pillar_marketing_sub: 'Brand Architecture',
+      pillar_hospitality_sub: 'F&B & Lifestyle Ventures',
 
-      biz_tagline: 'Capabilities & Focus',
-      biz_title: 'Our Businesses',
-      biz_desc: 'Four integrated operating pillars positioned across high-growth economic sectors in Vietnam, delivering end-to-end strategic execution and enterprise capability.',
+      biz_tagline: 'Operating Divisions',
+      biz_title: 'Four Core Business Pillars',
+      biz_desc: 'Integrated enterprise capabilities driving commercial growth, technological innovation, and operational excellence across key sectors in Vietnam.',
+
+      p1_title: 'STRATEGY & CONSULTING',
+      p1_desc: 'Cross-border strategic advisory, specialized India-Vietnam business structuring, statutory regulatory compliance, and commercial procurement.',
+      p1_cap1: 'Cross-Border Market Entry & Enterprise Expansion',
+      p1_cap2: 'Statutory Compliance, Labor Quotas (DOLISA) & Licensing',
+      p1_cap3: 'Strategic Supplier Procurement & Contract Negotiations',
+      p1_cap4: 'Commercial Feasibility & Unit Economics Modeling',
+
+      p2_title: 'TECHNOLOGY & ENTERPRISE AI',
+      p2_desc: 'Proprietary artificial intelligence architectures, intelligent automation engines, cloud-native web systems, and secure API infrastructure.',
+      p2_cap1: 'Intelligent AI Architecture & Workflow Automation',
+      p2_cap2: 'Enterprise Cloud Platforms & Scalable Backends',
+      p2_cap3: 'Custom API Integrations & High-Security Systems',
+      p2_cap4: 'Data Governance, Compliance & Automation Tools',
+
+      p3_title: 'MARKETING & BRAND ARCHITECTURE',
+      p3_desc: 'Corporate brand architecture, strategic market positioning, cross-cultural storytelling, and omnichannel growth infrastructure.',
+      p3_cap1: 'Corporate Brand Architecture & Strategic Narrative',
+      p3_cap2: 'Cross-Cultural Positioning (India ⇄ Vietnam Corridors)',
+      p3_cap3: 'Go-to-Market Strategy & B2B Distribution Engines',
+      p3_cap4: 'Performance Analytics, Creative Direction & PR',
+
+      p4_title: 'HOSPITALITY & CULINARY VENTURES',
+      p4_desc: 'Multi-unit commercial restaurant concept development, authentic gastronomy curation, strict kitchen SOPs, and lifestyle hospitality operations.',
+      p4_cap1: 'Multi-Unit Restaurant Incubation & Operations',
+      p4_cap2: 'Uncompromising Culinary Authenticity & Recipe Standardisation',
+      p4_cap3: 'Commercial Food Safety, Hygiene & Statutory Compliance',
+      p4_cap4: 'Experiential Dining & Lifestyle Asset Management',
+
+      portfolio_tagline: 'Real Ventures & Ecosystem',
+      portfolio_title: 'Our Brand Portfolio',
+      portfolio_desc: 'Tangible enterprises and specialized operating brands owned, developed, or managed under the VIETANA GROUP ecosystem.',
       
-      p1_title: 'CONSULTING',
-      p1_desc: 'Cross-border strategic advisory, Vietnam market entry, corporate governance, and operational transformation designed for sustainable scale.',
-      p1_cap1: 'Vietnam Market Entry & Expansion Advisory',
-      p1_cap2: 'Corporate Structuring & Regulatory Compliance',
-      p1_cap3: 'Strategic Procurement & Commercial Negotiations',
-      p1_cap4: 'Operational Due Diligence & Feasibility',
+      port1_status: 'Operating · 4 Locations',
+      port1_name: 'Mì Quảng Cô Viên',
+      port1_div: 'VIETANA Food & Beverage',
+      port1_desc: 'Celebrated Central Vietnamese noodle heritage brand serving authentic Quang-style dishes prepared with traditional recipes, regional herbs, and premium ingredients across 4 operating branches in Ho Chi Minh City.',
+      port1_ent_lbl: 'Operating Entity',
+      port1_ent_val: 'MI QUANG CO VIEN FOOD TRADING CO., LTD',
+      port1_mst_lbl: 'Tax / MST Code',
+      port1_loc_lbl: 'Locations',
+      port1_loc_val: '4 Branches in TP. Thủ Đức, TP. Hồ Chí Minh',
 
-      p2_title: 'TECHNOLOGY',
-      p2_desc: 'Bespoke enterprise software, intelligent workflow automation, modern web platforms, and scalable cloud architectures.',
-      p2_cap1: 'Enterprise Software & Platform Engineering',
-      p2_cap2: 'Workflow Automation & Intelligent AI Systems',
-      p2_cap3: 'Scalable Cloud Architecture & Data Security',
-      p2_cap4: 'Custom API Integrations & Web Ecosystems',
+      port2_status: 'Pre-Operational · Launching Soon',
+      port2_name: 'The Spicy Spoon',
+      port2_div: 'VIETANA Food & Beverage',
+      port2_desc: 'Contemporary multi-regional Indian gastronomy concept crafted with authentic subcontinental spices and soul. Features strict station authenticity, international culinary talent, and modern dining ambiance in Ho Chi Minh City.',
+      port2_ent_lbl: 'Corporate Parent',
+      port2_ent_val: 'VIETANA GROUP COMPANY LIMITED',
+      port2_tagline_lbl: 'Brand Tagline',
+      port2_tagline_val: 'Crafted with Indian Soul',
+      port2_loc_lbl: 'Target Location',
+      port2_loc_val: 'Ho Chi Minh City, Vietnam',
 
-      p3_title: 'MARKETING',
-      p3_desc: 'Corporate brand architecture, strategic market positioning, omnichannel growth engines, and high-impact corporate communications.',
-      p3_cap1: 'Corporate Brand Architecture & Positioning',
-      p3_cap2: 'Go-to-Market Strategy & Demand Generation',
-      p3_cap3: 'High-Impact Content Direction & PR Storytelling',
-      p3_cap4: 'Performance Analytics & Growth Infrastructure',
+      port3_status: 'Active Corridor',
+      port3_name: 'VIETANA Global Advisory',
+      port3_div: 'VIETANA Strategy & Consulting',
+      port3_desc: 'Dedicated cross-border consulting division facilitating commercial trade, corporate market entry, statutory labor compliance, and supplier procurement between India, Southeast Asia, and Vietnam.',
+      port3_ent_lbl: 'Operating Division',
+      port3_ent_val: 'Corporate Advisory & B2B Procurement',
+      port3_focus_lbl: 'Core Corridor',
+      port3_focus_val: 'India ⇄ Vietnam Commercial Highway',
+      port3_scope_lbl: 'Nationwide Scope',
+      port3_scope_val: 'HCMC, Da Nang, Hanoi, Ha Long',
 
-      p4_title: 'HOSPITALITY',
-      p4_desc: 'Enterprise F&B concept incubation, commercial venue development, quality benchmarking, and lifestyle experience ventures.',
-      p4_cap1: 'Commercial F&B & Hospitality Concept Development',
-      p4_cap2: 'Operational Standards & Quality Benchmarking',
-      p4_cap3: 'Culinary Brand Partnerships & Incubation',
-      p4_cap4: 'Experience-Driven Commercial Venture Strategy',
+      port4_status: 'Proprietary Tech',
+      port4_name: 'VIETANA Tech Labs',
+      port4_div: 'VIETANA Technology',
+      port4_desc: 'In-house software engineering and applied AI team developing proprietary decision engines, Model Context Protocol (MCP) servers, enterprise automation, and custom web platforms for commercial operations.',
+      port4_ent_lbl: 'Engineering Division',
+      port4_ent_val: 'Enterprise Systems & Applied AI',
+      port4_standards_lbl: 'Core Architecture',
+      port4_standards_val: 'Open MCP Standard · Cloud-Native',
+      port4_app_lbl: 'Applications',
+      port4_app_val: 'Autonomous Workflows & Enterprise APIs',
 
       framework_tagline: 'Strategic Foundation',
       framework_title: 'The VIETANA Advantage',
       framework_desc: 'A disciplined approach that blends deep Vietnam operational fluency with international enterprise standards.',
       f1_title: 'Vietnam Fluency, Global Standards',
-      f1_desc: 'Deep local market insight, regulatory clarity, and extensive operational networks paired with institutional-grade delivery.',
+      f1_desc: 'Deep local market insight, regulatory clarity, and extensive operational networks in Ho Chi Minh City and nationwide paired with institutional-grade delivery.',
       f2_title: 'Cross-Sector Synergies',
-      f2_desc: 'Each business pillar reinforces the others — technology powers our operations, marketing scales our presence, and consulting steers execution.',
+      f2_desc: 'Each division reinforces the others — technology powers operations, marketing scales market presence, and strategic consulting steers capital allocation.',
       f3_title: 'Long-Term Value Creation',
-      f3_desc: 'We focus on sustainable business fundamentals, ethical governance, and strategic value that endures across market cycles.',
+      f3_desc: 'We focus on sustainable business fundamentals, ethical governance, and strategic value that endures across shifting economic cycles.',
+
+      gov_tagline: 'Institutional Transparency',
+      gov_title: 'Corporate Governance & Statutory Details',
+      gov_desc: 'VIETANA GROUP COMPANY LIMITED operates in full compliance with Vietnamese enterprise legislation and international business governance standards.',
+      gov_lbl_legal: 'Legal Entity Name',
+      gov_val_legal: 'CÔNG TY TNHH VIETANA GROUP (VIETANA GROUP COMPANY LIMITED)',
+      gov_lbl_mst: 'Enterprise Registration / Tax Code (MST)',
+      gov_val_mst: '0319680543',
+      gov_lbl_address: 'Registered Headquarters',
+      gov_val_address: '45 Nguyễn Quý Đức, Phường An Phú, TP. Thủ Đức, TP. Hồ Chí Minh, Vietnam',
+      gov_lbl_founder: 'Founder & Business Development',
+      gov_val_founder: 'Chayan Soni',
+      gov_lbl_sector: 'Primary Commercial Classifications',
+      gov_val_sector: 'Management Consulting, Technology, Marketing & F&B Ventures',
+      gov_lbl_jurisdiction: 'Jurisdiction & Authority',
+      gov_val_jurisdiction: 'Department of Planning and Investment (DPI), Ho Chi Minh City',
 
       statement_tag: 'Corporate Philosophy',
       statement_headline: 'Different industries.<br>One unified vision.',
-      statement_subtext: 'VIETANA GROUP bridges industry capabilities under one cohesive identity — building businesses, engineering solutions, and creating value with a Vietnam-first perspective.',
+      statement_subtext: 'VIETANA GROUP bridges industry capabilities under one cohesive identity — building businesses, engineering solutions, and cultivating value with a Vietnam-first perspective.',
 
       contact_tagline: 'Partnerships & Engagements',
-      contact_title: 'Corporate Inquiries',
-      contact_desc: 'Connect directly with our leadership team in Ho Chi Minh City for strategic partnerships, advisory services, technology collaborations, and business discussions.',
+      contact_title: 'Executive Inquiries',
+      contact_desc: 'Connect directly with our leadership team in Ho Chi Minh City for strategic partnerships, advisory services, technology collaborations, and commercial ventures.',
       
-      hq_label: 'Headquarters',
-      hq_val: '45 Nguyễn Quý Đức, Phường Bình Trưng, Thành phố Hồ Chí Minh, Vietnam',
-      phone_label: 'Direct Line',
+      hq_label: 'Corporate Headquarters',
+      hq_val: '45 Nguyễn Quý Đức, Phường An Phú, TP. Thủ Đức, TP. Hồ Chí Minh, Vietnam',
+      phone_label: 'Direct Line / Executive Office',
       email_label: 'Corporate Email',
       web_label: 'Official Domain',
 
       form_title: 'Submit an Executive Inquiry',
-      form_desc: 'Select your area of interest and our executive team will review and respond promptly.',
+      form_desc: 'Select your area of interest and our executive leadership will review and respond promptly.',
       form_name_lbl: 'Full Name',
       form_name_ph: 'Your Full Name',
       form_org_lbl: 'Company / Organization',
       form_org_ph: 'Your Organization Name',
       form_type_lbl: 'Inquiry Category',
-      form_type_opt1: 'Strategic Consulting & Advisory',
-      form_type_opt2: 'Technology & Digital Solutions',
+      form_type_opt1: 'Strategic Consulting & Cross-Border Advisory',
+      form_type_opt2: 'Technology & Enterprise AI Solutions',
       form_type_opt3: 'Marketing & Brand Strategy',
-      form_type_opt4: 'Hospitality & Commercial Ventures',
-      form_type_opt5: 'General Corporate Partnership',
+      form_type_opt4: 'Hospitality & F&B Concept Collaboration',
+      form_type_opt5: 'General Corporate Partnership & Investment',
       form_msg_lbl: 'Brief / Message',
       form_msg_ph: 'Outline your project, collaboration idea, or inquiry...',
       form_submit_email: 'Send via Email',
       form_submit_wa: 'Connect on WhatsApp',
 
       footer_tagline: 'Consulting · Technology · Marketing · Hospitality',
-      footer_desc: 'A Vietnam-based enterprise group creating businesses, developing solutions, and building experiences with a Vietnam-first perspective.',
+      footer_desc: 'A Vietnam-based enterprise group creating businesses, developing solutions, and cultivating enduring value with a Vietnam-first perspective.',
       footer_nav_title: 'Corporate Navigation',
       footer_areas_title: 'Operating Sectors',
       footer_rights: '© 2026 VIETANA GROUP. All rights reserved.',
-      footer_legal: 'VIETANA GROUP COMPANY LIMITED'
+      footer_legal: 'CÔNG TY TNHH VIETANA GROUP (MST: 0319680543)'
     },
     vi: {
       nav_about: 'Giới thiệu',
       nav_businesses: 'Lĩnh vực',
+      nav_portfolio: 'Hệ sinh thái',
       nav_framework: 'Thế mạnh',
+      nav_governance: 'Pháp lý',
       nav_contact: 'Liên hệ',
       nav_get_in_touch: 'Kết nối ngay',
-      badge_corp_status: 'Cổng thông tin doanh nghiệp · TP. Hồ Chí Minh',
+
+      badge_corp_status: 'CÔNG TY TNHH VIETANA GROUP · MST: 0319680543',
       hero_title: 'VIETANA GROUP',
+      hero_tagline: 'Kiến tạo Doanh nghiệp · Tiên phong Công nghệ · Lan tỏa Văn hóa',
       hero_subheading_1: 'Tư vấn',
       hero_subheading_2: 'Công nghệ',
       hero_subheading_3: 'Tiếp thị',
       hero_subheading_4: 'Khách sạn & Dịch vụ',
-      hero_supporting: 'Tập đoàn kinh doanh đa ngành tại Việt Nam — kiến tạo doanh nghiệp vững mạnh, phát triển công nghệ hiện đại và mang lại giá trị bền vững.',
-      hero_cta_explore: 'Khám phá Lĩnh vực',
+      hero_supporting: 'Có trụ sở chính tại TP. Hồ Chí Minh, VIETANA GROUP là tập đoàn đa ngành hoạt động trên các lĩnh vực tư vấn chiến lược, công nghệ doanh nghiệp, tiếp thị thương hiệu và mô hình ẩm thực - dịch vụ tại Việt Nam.',
+      hero_cta_portfolio: 'Xem Hệ sinh thái Thương hiệu',
       hero_cta_contact: 'Liên hệ Hợp tác',
 
       stat_pillars_num: '04',
-      stat_pillars_lbl: 'Trụ cột Kinh doanh',
+      stat_pillars_lbl: 'Khối Kinh doanh Trọng tâm',
+      stat_branches_num: '04+',
+      stat_branches_lbl: 'Chi nhánh Ẩm thực Hoạt động',
+      stat_tax_num: '0319680543',
+      stat_tax_lbl: 'Mã số Thuế / ĐKKD',
       stat_hq_num: 'TP.HCM',
       stat_hq_lbl: 'Trụ sở Doanh nghiệp',
-      stat_scope_num: 'Toàn quốc',
-      stat_scope_lbl: 'Quy mô Hoạt động',
-      stat_standards_num: 'Chuẩn mực',
-      stat_standards_lbl: 'Quản trị Doanh nghiệp',
 
       about_badge: 'Tổng quan Doanh nghiệp',
       about_title: 'Về VIETANA GROUP',
-      about_text: '<strong>CÔNG TY TNHH VIETANA GROUP</strong> là tập đoàn kinh tế đa ngành tại Việt Nam hoạt động trên các lĩnh vực tư vấn chiến lược, giải pháp công nghệ, tiếp thị thương hiệu và dịch vụ khách sạn. Chúng tôi kết hợp tư duy thị trường sắc bén, năng lực công nghệ và kỷ luật vận hành để phát triển các dự án chuẩn mực cao.',
-      pillar_consulting_sub: 'Chiến lược & Quản trị',
-      pillar_tech_sub: 'Kỹ thuật & Nền tảng',
-      pillar_marketing_sub: 'Thương hiệu & Tăng trưởng',
-      pillar_hospitality_sub: 'Mô hình Dịch vụ',
+      about_text: '<strong>CÔNG TY TNHH VIETANA GROUP</strong> là tập đoàn kinh tế đa ngành năng động, phát triển dựa trên niềm tin rằng sự tăng trưởng mạnh mẽ của Việt Nam được hiện thực hóa tốt nhất thông qua sự thực thi liên ngành. Hoạt động trên các lĩnh vực tư vấn, kỹ thuật số, kiến trúc thương hiệu và ẩm thực dịch vụ, chúng tôi kết nối các tiêu chuẩn quốc tế với sự am hiểu sâu sắc thị trường bản địa.',
+      pillar_consulting_sub: 'Tư vấn Xuyên biên giới',
+      pillar_tech_sub: 'Công nghệ & Nền tảng AI',
+      pillar_marketing_sub: 'Kiến trúc Thương hiệu',
+      pillar_hospitality_sub: 'Ẩm thực & Dịch vụ F&B',
 
-      biz_tagline: 'Năng lực & Trọng tâm',
-      biz_title: 'Các Lĩnh vực Hoạt động',
-      biz_desc: 'Bốn trụ cột kinh doanh cốt lõi nằm trong các ngành kinh tế trọng điểm tại Việt Nam, mang lại giải pháp toàn diện và năng lực vượt trội.',
-      
+      biz_tagline: 'Khối Hoạt động',
+      biz_title: 'Bốn Trụ cột Kinh doanh Cốt lõi',
+      biz_desc: 'Năng lực doanh nghiệp tích hợp thúc đẩy tăng trưởng thương mại, đổi mới công nghệ và chuẩn mực vận hành xuất sắc tại Việt Nam.',
+
       p1_title: 'TƯ VẤN CHIẾN LƯỢC',
-      p1_desc: 'Tư vấn gia nhập thị trường Việt Nam, cấu trúc doanh nghiệp xuyên biên giới, quản trị doanh nghiệp và chuyển đổi vận hành bền vững.',
-      p1_cap1: 'Tư vấn Gia nhập & Mở rộng Thị trường Việt Nam',
-      p1_cap2: 'Cấu trúc Doanh nghiệp & Tuân thủ Pháp lý',
-      p1_cap3: 'Mua sắm Chiến lược & Đàm phán Thương mại',
-      p1_cap4: 'Thẩm định Vận hành & Phân tích Khả thi',
+      p1_desc: 'Tư vấn chiến lược xuyên biên giới, chuyên sâu hành lang doanh nghiệp Ấn Độ - Việt Nam, tuân thủ pháp lý và mua sắm thương mại.',
+      p1_cap1: 'Tư vấn Gia nhập & Mở rộng Thị trường Xuyên biên giới',
+      p1_cap2: 'Tuân thủ Pháp lý, Hạn ngạch Lao động nước ngoài (Sở LĐ-TB&XH) & Giấy phép',
+      p1_cap3: 'Mua sắm Chiến lược & Đàm phán Hợp đồng Nhà cung cấp',
+      p1_cap4: 'Thẩm định Khả thi Thương mại & Mô hình Đơn vị Kinh tế',
 
-      p2_title: 'CÔNG NGHỆ SỐ',
-      p2_desc: 'Phần mềm doanh nghiệp theo yêu cầu, tự động hóa quy trình thông minh, nền tảng số hiện đại và hạ tầng đám mây an toàn.',
-      p2_cap1: 'Kỹ thuật Phần mềm & Nền tảng Doanh nghiệp',
-      p2_cap2: 'Tự động hóa Quy trình & Ứng dụng AI Thông minh',
-      p2_cap3: 'Hạ tầng Đám mây Mở rộng & An toàn Dữ liệu',
-      p2_cap4: 'Tích hợp Hệ thống API & Hệ sinh thái Web',
+      p2_title: 'CÔNG NGHỆ & TRÍ TUỆ NHÂN TẠO',
+      p2_desc: 'Kiến trúc trí tuệ nhân tạo chuyên sâu, động cơ tự động hóa thông minh, nền tảng web điện toán đám mây và hạ tầng API bảo mật.',
+      p2_cap1: 'Kiến trúc AI Thông minh & Tự động hóa Quy trình',
+      p2_cap2: 'Nền tảng Đám mây Doanh nghiệp & Hệ thống Mở rộng',
+      p2_cap3: 'Tích hợp API Tùy chỉnh & Hệ thống An toàn Dữ liệu',
+      p2_cap4: 'Quản trị Dữ liệu, Tuân thủ Pháp chế & Công cụ Tự động',
 
       p3_title: 'TIẾP THỊ & THƯƠNG HIỆU',
-      p3_desc: 'Kiến trúc thương hiệu doanh nghiệp, định vị thị trường chiến lược, động cơ tăng trưởng đa kênh và truyền thông tác động cao.',
-      p3_cap1: 'Kiến trúc Thương hiệu Doanh nghiệp & Định vị',
-      p3_cap2: 'Chiến lược Tiếp cận Thị trường & Tạo Nhu cầu',
-      p3_cap3: 'Định hướng Nội dung & Truyền thông Doanh nghiệp',
-      p3_cap4: 'Phân tích Hiệu suất & Hạ tầng Tăng trưởng',
+      p3_desc: 'Kiến trúc thương hiệu doanh nghiệp, định vị thị trường chiến lược, truyền thông đa văn hóa và hạ tầng tăng trưởng đa kênh.',
+      p3_cap1: 'Kiến trúc Thương hiệu Doanh nghiệp & Thông điệp Chiến lược',
+      p3_cap2: 'Định vị Đa văn hóa (Hành lang Ấn Độ ⇄ Việt Nam)',
+      p3_cap3: 'Chiến lược Tiếp cận Thị trường & Kênh Phân phối B2B',
+      p3_cap4: 'Phân tích Hiệu suất, Định hướng Sáng tạo & PR Doanh nghiệp',
 
-      p4_title: 'KHÁCH SẠN & DỊCH VỤ',
-      p4_desc: 'Phát triển mô hình F&B thương mại, chuẩn hóa vận hành dịch vụ khách sạn và phát triển các dự án trải nghiệm phong cách sống.',
-      p4_cap1: 'Phát triển Mô hình F&B & Khách sạn Thương mại',
-      p4_cap2: 'Tiêu chuẩn Vận hành & Định chuẩn Chất lượng',
-      p4_cap3: 'Hợp tác & Ươm mầm Thương hiệu Ẩm thực',
-      p4_cap4: 'Chiến lược Dự án Trải nghiệm Khách hàng',
+      p4_title: 'ẨM THỰC & DỊCH VỤ F&B',
+      p4_desc: 'Phát triển chuỗi nhà hàng thương mại, bảo tồn di sản ẩm thực nguyên bản, chuẩn hóa quy trình SOP bếp và quản trị dịch vụ phong cách sống.',
+      p4_cap1: 'Ươm mầm & Vận hành Chuỗi Nhà hàng Thương mại',
+      p4_cap2: 'Bảo tồn Ẩm thực Nguyên bản & Chuẩn hóa Công thức Chế biến',
+      p4_cap3: 'An toàn Vệ sinh Thực phẩm & Tuân thủ Tiêu chuẩn Pháp lý',
+      p4_cap4: 'Trải nghiệm Ẩm thực & Quản trị Dự án Phong cách sống',
+
+      portfolio_tagline: 'Thương hiệu & Dự án Thực tế',
+      portfolio_title: 'Hệ sinh thái Thương hiệu',
+      portfolio_desc: 'Các doanh nghiệp cụ thể và thương hiệu hoạt động trực thuộc hoặc được quản lý bởi hệ sinh thái VIETANA GROUP.',
+      
+      port1_status: 'Đang Hoạt động · 4 Chi nhánh',
+      port1_name: 'Mì Quảng Cô Viên',
+      port1_div: 'Khối Ẩm thực & Dịch vụ VIETANA',
+      port1_desc: 'Thương hiệu di sản ẩm thực miền Trung phục vụ món mì Quảng chuẩn vị truyền thống từ rau sống đặc trưng, nguyên liệu tươi ngon với 4 chi nhánh đang hoạt động tại TP. Thủ Đức, TP. Hồ Chí Minh.',
+      port1_ent_lbl: 'Pháp nhân Vận hành',
+      port1_ent_val: 'CÔNG TY TNHH THƯƠNG MẠI THỰC PHẨM MÌ QUẢNG CÔ VIÊN',
+      port1_mst_lbl: 'Mã số Thuế (MST)',
+      port1_loc_lbl: 'Hệ thống Chi nhánh',
+      port1_loc_val: '4 Chi nhánh tại TP. Thủ Đức, TP. Hồ Chí Minh',
+
+      port2_status: 'Chuẩn bị Khai trương',
+      port2_name: 'The Spicy Spoon',
+      port2_div: 'Khối Ẩm thực & Dịch vụ VIETANA',
+      port2_desc: 'Mô hình ẩm thực Ấn Độ đa vùng miền đương đại mang hương vị tiểu lục địa đích thực. Thiết kế trạm bếp chuyên biệt, đầu bếp quốc tế và không gian ẩm thực sang trọng tại TP. Hồ Chí Minh.',
+      port2_ent_lbl: 'Công ty Chủ quản',
+      port2_ent_val: 'CÔNG TY TNHH VIETANA GROUP',
+      port2_tagline_lbl: 'Khẩu hiệu Thương hiệu',
+      port2_tagline_val: 'Crafted with Indian Soul',
+      port2_loc_lbl: 'Địa điểm Hoạt động',
+      port2_loc_val: 'TP. Hồ Chí Minh, Việt Nam',
+
+      port3_status: 'Hành lang Hoạt động',
+      port3_name: 'VIETANA Global Advisory',
+      port3_div: 'Khối Tư vấn Chiến lược VIETANA',
+      port3_desc: 'Bộ phận tư vấn quốc tế chuyên trách xúc tiến thương mại, gia nhập thị trường, cấp phép lao động nước ngoài và mua sắm thương mại giữa Ấn Độ, Đông Nam Á và Việt Nam.',
+      port3_ent_lbl: 'Khối Hoạt động',
+      port3_ent_val: 'Tư vấn Doanh nghiệp & Mua sắm B2B',
+      port3_focus_lbl: 'Hành lang Trọng tâm',
+      port3_focus_val: 'Tuyến Thương mại Ấn Độ ⇄ Việt Nam',
+      port3_scope_lbl: 'Quy mô Hoạt động',
+      port3_scope_val: 'TP.HCM, Đà Nẵng, Hà Nội, Hạ Long',
+
+      port4_status: 'Nền tảng Công nghệ',
+      port4_name: 'VIETANA Tech Labs',
+      port4_div: 'Khối Công nghệ VIETANA',
+      port4_desc: 'Đội ngũ kỹ thuật phần mềm phát triển động cơ quyết định AI chuyên dụng, hệ thống giao thức MCP (Model Context Protocol), tự động hóa doanh nghiệp và nền tảng số hiện đại.',
+      port4_ent_lbl: 'Khối Kỹ thuật',
+      port4_ent_val: 'Hệ thống Doanh nghiệp & Ứng dụng AI',
+      port4_standards_lbl: 'Kiến trúc Tiêu chuẩn',
+      port4_standards_val: 'Chuẩn MCP Mở · Điện toán Đám mây',
+      port4_app_lbl: 'Ứng dụng Thực tế',
+      port4_app_val: 'Quy trình Tự động & API Doanh nghiệp',
 
       framework_tagline: 'Nền tảng Chiến lược',
       framework_title: 'Thế mạnh VIETANA',
@@ -193,9 +314,25 @@ document.addEventListener('DOMContentLoaded', () => {
       f1_title: 'Thấu hiểu Bản địa, Chuẩn mực Quốc tế',
       f1_desc: 'Sự thông thạo môi trường kinh doanh tại Việt Nam, mạng lưới vận hành sâu rộng cùng năng lực bàn giao chuyên nghiệp.',
       f2_title: 'Cộng hưởng Liên ngành',
-      f2_desc: 'Mỗi trụ cột bổ trợ lẫn nhau — công nghệ tối ưu vận hành, tiếp thị mở rộng quy mô và tư vấn định hướng chiến lược.',
+      f2_desc: 'Mỗi khối bổ trợ lẫn nhau — công nghệ tối ưu vận hành, tiếp thị mở rộng quy mô và tư vấn định hướng chiến lược.',
       f3_title: 'Tạo lập Giá trị Bền vững',
       f3_desc: 'Tập trung vào nền tảng kinh doanh cốt lõi, đạo đức doanh nghiệp và giá trị lâu dài qua mọi chu kỳ kinh tế.',
+
+      gov_tagline: 'Minh bạch Doanh nghiệp',
+      gov_title: 'Quản trị Doanh nghiệp & Thông tin Pháp lý',
+      gov_desc: 'CÔNG TY TNHH VIETANA GROUP hoạt động tuân thủ đầy đủ Luật Doanh nghiệp Việt Nam và các tiêu chuẩn quản trị kinh doanh quốc tế.',
+      gov_lbl_legal: 'Tên Doanh nghiệp Đăng ký',
+      gov_val_legal: 'CÔNG TY TNHH VIETANA GROUP (VIETANA GROUP COMPANY LIMITED)',
+      gov_lbl_mst: 'Mã số Doanh nghiệp / Mã số Thuế (MST)',
+      gov_val_mst: '0319680543',
+      gov_lbl_address: 'Địa chỉ Trụ sở chính',
+      gov_val_address: '45 Nguyễn Quý Đức, Phường An Phú, TP. Thủ Đức, TP. Hồ Chí Minh, Việt Nam',
+      gov_lbl_founder: 'Sáng lập & Phát triển Kinh doanh',
+      gov_val_founder: 'Chayan Soni',
+      gov_lbl_sector: 'Ngành nghề Kinh doanh Trọng tâm',
+      gov_val_sector: 'Tư vấn Quản lý, Công nghệ, Tiếp thị & Dịch vụ Ẩm thực (F&B)',
+      gov_lbl_jurisdiction: 'Cơ quan Cấp phép',
+      gov_val_jurisdiction: 'Sở Kế hoạch và Đầu tư TP. Hồ Chí Minh',
 
       statement_tag: 'Triết lý Doanh nghiệp',
       statement_headline: 'Đa dạng ngành nghề.<br>Chung một tầm nhìn.',
@@ -205,9 +342,9 @@ document.addEventListener('DOMContentLoaded', () => {
       contact_title: 'Liên hệ Doanh nghiệp',
       contact_desc: 'Kết nối trực tiếp với ban lãnh đạo của chúng tôi tại TP. Hồ Chí Minh để thảo luận về hợp tác chiến lược, dịch vụ tư vấn và giải pháp công nghệ.',
       
-      hq_label: 'Trụ sở chính',
-      hq_val: '45 Nguyễn Quý Đức, Phường Bình Trưng, Thành phố Hồ Chí Minh, Việt Nam',
-      phone_label: 'Đường dây nóng',
+      hq_label: 'Trụ sở Doanh nghiệp',
+      hq_val: '45 Nguyễn Quý Đức, Phường An Phú, TP. Thủ Đức, TP. Hồ Chí Minh, Việt Nam',
+      phone_label: 'Đường dây nóng / Văn phòng Điều hành',
       email_label: 'Email Doanh nghiệp',
       web_label: 'Website Chính thức',
 
@@ -218,22 +355,22 @@ document.addEventListener('DOMContentLoaded', () => {
       form_org_lbl: 'Tổ chức / Doanh nghiệp',
       form_org_ph: 'Tên công ty hoặc tổ chức',
       form_type_lbl: 'Lĩnh vực Hợp tác',
-      form_type_opt1: 'Tư vấn Chiến lược & Gia nhập Thị trường',
-      form_type_opt2: 'Giải pháp Công nghệ & Phần mềm',
+      form_type_opt1: 'Tư vấn Chiến lược & Hành lang Xuyên biên giới',
+      form_type_opt2: 'Giải pháp Công nghệ & Ứng dụng AI Doanh nghiệp',
       form_type_opt3: 'Chiến lược Tiếp thị & Thương hiệu',
-      form_type_opt4: 'Dự án Khách sạn & Ẩm thực (F&B)',
-      form_type_opt5: 'Hợp tác Doanh nghiệp Chung',
+      form_type_opt4: 'Hợp tác Dự án Ẩm thực (F&B)',
+      form_type_opt5: 'Hợp tác Doanh nghiệp & Đầu tư Chung',
       form_msg_lbl: 'Nội dung trao đổi',
       form_msg_ph: 'Mô tả ngắn gọn về nhu cầu hoặc kế hoạch hợp tác...',
       form_submit_email: 'Gửi qua Email',
       form_submit_wa: 'Nhắn tin qua WhatsApp',
 
-      footer_tagline: 'Tư vấn · Công nghệ · Tiếp thị · Khách sạn & Dịch vụ',
-      footer_desc: 'Tập đoàn kinh tế đa ngành tại Việt Nam kiến tạo doanh nghiệp, phát triển giải pháp và xây dựng giá trị bền vững.',
+      footer_tagline: 'Tư vấn · Công nghệ · Tiếp thị · Khách sạn & Ẩm thực',
+      footer_desc: 'Tập đoàn kinh tế đa ngành tại Việt Nam kiến tạo doanh nghiệp, phát triển giải pháp và lan tỏa giá trị bền vững.',
       footer_nav_title: 'Điều hướng',
-      footer_areas_title: 'Lĩnh vực Trọng tâm',
+      footer_areas_title: 'Khối Hoạt động',
       footer_rights: '© 2026 VIETANA GROUP. Bảo lưu mọi quyền.',
-      footer_legal: 'CÔNG TY TNHH VIETANA GROUP'
+      footer_legal: 'CÔNG TY TNHH VIETANA GROUP (MST: 0319680543)'
     }
   };
 
@@ -249,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update text content for data-i18n elements
     document.querySelectorAll('[data-i18n]').forEach((el) => {
       const key = el.getAttribute('data-i18n');
-      if (i18n[lang][key]) {
+      if (i18n[lang] && i18n[lang][key]) {
         el.innerHTML = i18n[lang][key];
       }
     });
@@ -257,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update placeholders for inputs
     document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
       const key = el.getAttribute('data-i18n-placeholder');
-      if (i18n[lang][key]) {
+      if (i18n[lang] && i18n[lang][key]) {
         el.setAttribute('placeholder', i18n[lang][key]);
       }
     });
@@ -426,7 +563,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const getFormData = () => {
       const name = document.getElementById('inquiryName')?.value.trim() || 'Valued Partner';
       const org = document.getElementById('inquiryOrg')?.value.trim() || 'Independent';
-      const category = document.getElementById('inquiryType')?.value || 'General Corporate';
+      const category = document.getElementById('inquiryType')?.value || 'General Corporate Partnership';
       const message = document.getElementById('inquiryMessage')?.value.trim() || 'I would like to explore collaboration with VIETANA GROUP.';
       return { name, org, category, message };
     };
@@ -435,17 +572,18 @@ document.addEventListener('DOMContentLoaded', () => {
       emailBtn.addEventListener('click', (e) => {
         e.preventDefault();
         const data = getFormData();
-        const subject = encodeURIComponent(`[Corporate Inquiry] ${data.category} — ${data.name} (${data.org})`);
+        const subject = encodeURIComponent(`[Executive Inquiry] ${data.category} — ${data.name} (${data.org})`);
         const body = encodeURIComponent(
-          `Dear VIETANA GROUP Leadership Team,\n\n` +
-          `Name: ${data.name}\n` +
+          `To: VIETANA GROUP Executive Leadership\n` +
+          `Company: CÔNG TY TNHH VIETANA GROUP\n\n` +
+          `Sender: ${data.name}\n` +
           `Organization: ${data.org}\n` +
           `Inquiry Category: ${data.category}\n\n` +
-          `Message:\n${data.message}\n\n` +
-          `Sent via www.vietanagroup.com`
+          `Message Details:\n${data.message}\n\n` +
+          `Submitted via official corporate portal: https://vietanagroup.com`
         );
         window.location.href = `mailto:vietanagroup@gmail.com?subject=${subject}&body=${body}`;
-        window.showToast('Opening email client...');
+        window.showToast('Opening corporate email client...');
       });
     }
 
@@ -454,12 +592,13 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const data = getFormData();
         const text = encodeURIComponent(
-          `Hello VIETANA GROUP, my name is ${data.name} from ${data.org}.\n` +
-          `I am reaching out regarding *${data.category}*.\n\n` +
-          `Message: ${data.message}`
+          `*VIETANA GROUP — Executive Corporate Inquiry*\n` +
+          `From: ${data.name} (${data.org})\n` +
+          `Focus: *${data.category}*\n\n` +
+          `Message:\n${data.message}`
         );
         window.open(`https://wa.me/84902434006?text=${text}`, '_blank', 'noopener,noreferrer');
-        window.showToast('Connecting via WhatsApp...');
+        window.showToast('Connecting with VIETANA Executive Desk...');
       });
     }
   }
